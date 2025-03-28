@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mydas - Best Tech Deals</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-            animation: fadeIn 1s ease-in-out;
-        }
-    </style>
-</head>
+<header class="bg-[#111827] text-white py-3 px-6 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+        <span class="text-yellow-400 font-bold text-xl">MyAffiliate</span>
+    </div>
+    <nav class="space-x-6">
+        <a href="#" class="hover:text-yellow-400">Home</a>
+        <a href="#" class="hover:text-yellow-400">Categories</a>
+        <a href="#" class="hover:text-yellow-400">Deals</a>
+        <a href="#" class="hover:text-yellow-400">Contact</a>
+    </nav>
+    <div class="relative">
+        <input type="text" placeholder="Search products..." class="px-4 py-2 rounded-full w-72 text-black">
+        <button class="absolute right-3 top-1/2 transform -translate-y-1/2 flex items-center justify-center">
+            🔍
+        </button>
+    </div>
+</header>
 <body class="bg-white text-gray-900">
 
     <!-- Navbar -->
