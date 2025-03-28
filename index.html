@@ -18,14 +18,13 @@
     </script>
 </head>
 <body class="bg-gray-100 text-gray-900 font-inter">
-
-    <!-- Sticky Navigation Bar -->
+ <!-- Navbar -->
     <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logo -->
             <a href="#" class="text-2xl font-bold text-blue-600">MyAffiliate</a>
 
-            <!-- Navigation Links -->
+            <!-- Desktop Navigation -->
             <div class="hidden md:flex space-x-6">
                 <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
                 <a href="#" class="text-gray-700 hover:text-blue-600">Categories</a>
@@ -33,14 +32,16 @@
                 <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
             </div>
 
-            <!-- Search Bar -->
-            <div class="relative">
-                <input type="text" placeholder="Search products..." class="px-4 py-2 border rounded-full w-48 md:w-64">
-                <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500">🔍</button>
-            </div>
-
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-gray-700 text-2xl">☰</button>
+            <button id="menu-btn" class="md:hidden text-gray-700 text-2xl">☰</button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden bg-white shadow-md absolute top-full left-0 w-full">
+            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-200">Home</a>
+            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-200">Categories</a>
+            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-200">Deals</a>
+            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-200">Contact</a>
         </div>
     </nav>
 
