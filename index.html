@@ -5,9 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyAffiliate - Best Tech Deals</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Smooth Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
-
+    
     <!-- Navigation Bar -->
     <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -27,55 +39,61 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="bg-gray-700 text-white text-center py-24 mt-16">
-        <h1 class="text-5xl font-bold animate-fade-in">Elevate Your Tech Experience</h1>
-        <p class="text-lg mt-3 animate-fade-in-delay">Find the top-rated gaming and tech gadgets, hand-picked for you.</p>
-        <a href="#" class="mt-5 inline-block bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-bold shadow-md hover:bg-blue-700 transition">Shop Now</a>
+    <header class="bg-gray-700 text-white h-screen flex items-center justify-center text-center px-6">
+        <div class="max-w-3xl">
+            <h1 class="text-5xl font-bold fade-in">Elevate Your Tech Experience</h1>
+            <p class="mt-4 text-lg fade-in">Find the top-rated gaming and tech gadgets, hand-picked for you.</p>
+            <a href="#" class="mt-6 inline-block bg-blue-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition fade-in">Shop Now</a>
+        </div>
     </header>
 
-    <!-- Product Listings -->
-    <section class="max-w-7xl mx-auto py-12">
-        <h2 class="text-3xl font-bold text-center mb-6">Top Tech Deals</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-lg shadow hover:scale-105 transition">
-                <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-40 object-cover rounded">
-                <h3 class="text-lg font-semibold mt-4">Gaming Headset</h3>
-                <p class="text-gray-600">Immersive sound experience with noise cancellation.</p>
-                <a href="#" class="block mt-3 text-blue-600 font-semibold">View Deal →</a>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow hover:scale-105 transition">
-                <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-40 object-cover rounded">
-                <h3 class="text-lg font-semibold mt-4">Mechanical Keyboard</h3>
-                <p class="text-gray-600">RGB lighting and ultra-fast response keys.</p>
-                <a href="#" class="block mt-3 text-blue-600 font-semibold">View Deal →</a>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow hover:scale-105 transition">
-                <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-40 object-cover rounded">
-                <h3 class="text-lg font-semibold mt-4">4K Gaming Monitor</h3>
-                <p class="text-gray-600">Experience stunning visuals with high refresh rates.</p>
-                <a href="#" class="block mt-3 text-blue-600 font-semibold">View Deal →</a>
+    <!-- Featured Products -->
+    <section class="py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center fade-in">Top Tech Picks</h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-8">
+                <!-- Product 1 -->
+                <div class="bg-white p-6 shadow-md rounded-lg fade-in">
+                    <img src="https://via.placeholder.com/300" alt="Product" class="rounded-lg w-full">
+                    <h3 class="text-xl font-semibold mt-4">Gaming Headset</h3>
+                    <p class="text-gray-600 mt-2">Crystal clear audio for immersive gaming.</p>
+                    <a href="#" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">View Deal</a>
+                </div>
+                <!-- Product 2 -->
+                <div class="bg-white p-6 shadow-md rounded-lg fade-in">
+                    <img src="https://via.placeholder.com/300" alt="Product" class="rounded-lg w-full">
+                    <h3 class="text-xl font-semibold mt-4">Mechanical Keyboard</h3>
+                    <p class="text-gray-600 mt-2">Responsive keys for a satisfying typing experience.</p>
+                    <a href="#" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">View Deal</a>
+                </div>
+                <!-- Product 3 -->
+                <div class="bg-white p-6 shadow-md rounded-lg fade-in">
+                    <img src="https://via.placeholder.com/300" alt="Product" class="rounded-lg w-full">
+                    <h3 class="text-xl font-semibold mt-4">Gaming Mouse</h3>
+                    <p class="text-gray-600 mt-2">Precision and speed for competitive gaming.</p>
+                    <a href="#" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">View Deal</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white text-center py-6 mt-12">
-        <p>&copy; 2025 MyAffiliate. All rights reserved.</p>
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <p>&copy; 2025 MyAffiliate. All Rights Reserved.</p>
     </footer>
 
-    <!-- Animations -->
-    <style>
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-            animation: fadeIn 1s ease-out;
-        }
-        .animate-fade-in-delay {
-            animation: fadeIn 1.5s ease-out;
-        }
-    </style>
+    <!-- JavaScript for Animations -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fadeElements = document.querySelectorAll(".fade-in");
+            fadeElements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add("show");
+                }, index * 300);
+            });
+        });
+    </script>
 
 </body>
 </html>
+
