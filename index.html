@@ -3,96 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Affiliate Website</title>
+    <title>MyAffiliate - Best Tech Deals</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
 
-    <!-- Navbar -->
+    <!-- Navigation -->
     <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="text-2xl font-bold text-blue-600">MyAffiliate</a>
-
-            <!-- Navigation Links -->
+            <a href="#" class="text-2xl font-bold text-blue-600 hover:text-blue-800 transition-all">MyAffiliate</a>
             <div class="hidden md:flex space-x-6">
-                <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600">Categories</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600">Deals</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 transition-all">Home</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 transition-all">Categories</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 transition-all">Deals</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 transition-all">Contact</a>
             </div>
-
-            <!-- Search Bar -->
-            <div class="relative hidden md:block">
-                <input type="text" placeholder="Search products..." class="px-4 py-2 border rounded-full w-48 md:w-64 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500">🔍</button>
+            <div class="relative">
+                <input type="text" placeholder="Search products..." class="px-4 py-2 border rounded-full w-48 md:w-64 focus:ring-2 focus:ring-blue-500 transition-all">
+                <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-blue-600 transition-all">🔍</button>
             </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-gray-700 text-2xl">☰</button>
+            <button class="md:hidden text-gray-700 text-2xl">☰</button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="relative w-full h-[550px] bg-cover bg-center flex items-center justify-center"
-        style="background-image: url('https://source.unsplash.com/1600x900/?technology,gaming');">
+    <!-- Hero Section with Fade-in Effect -->
+    <div class="relative w-full h-[500px] bg-cover bg-center opacity-0 animate-fade-in"
+        style="background-image: url('https://source.unsplash.com/1600x900/?gaming,setup,technology');">
         <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-6">
-            <h2 class="text-5xl font-extrabold tracking-wide">🚀 Upgrade Your Tech Experience</h2>
-            <p class="text-2xl mt-4 max-w-2xl">Discover top-tier gaming gear & exclusive deals, hand-picked for you.</p>
-            <a href="#" class="mt-6 bg-blue-500 text-white py-3 px-8 rounded-full text-xl font-bold shadow-lg hover:bg-blue-700 transition-all duration-300">
+            <h1 class="text-6xl font-extrabold tracking-wide animate-fade-up">Elevate Your Tech Experience</h1>
+            <p class="text-2xl mt-4 max-w-2xl animate-fade-up delay-200">Find the top-rated gaming and tech gadgets, hand-picked for you.</p>
+            <a href="#" class="mt-6 bg-blue-500 text-white py-3 px-8 rounded-full text-xl font-bold shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-110">
                 Shop Now
             </a>
         </div>
     </div>
 
-    <!-- Product Grid -->
-    <div class="max-w-6xl mx-auto py-10 px-5">
-        <h2 class="text-3xl font-bold text-center mb-6">Top Picks for You</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <!-- Product 1 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
-                <img src="https://source.unsplash.com/400x300/?gaming,headphone" alt="Gaming Headphones" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h3 class="text-xl font-bold">Gaming Headphones</h3>
-                    <p class="text-gray-700 mt-2">Experience high-quality sound with these top-rated headphones.</p>
-                    <a href="#" class="block mt-4 bg-blue-500 text-white py-2 px-4 text-center rounded-lg hover:bg-blue-700">Buy Now</a>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
-                <img src="https://source.unsplash.com/400x300/?keyboard,mechanical" alt="Mechanical Keyboard" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h3 class="text-xl font-bold">Mechanical Keyboard</h3>
-                    <p class="text-gray-700 mt-2">Enhance your gaming experience with this RGB mechanical keyboard.</p>
-                    <a href="#" class="block mt-4 bg-blue-500 text-white py-2 px-4 text-center rounded-lg hover:bg-blue-700">Buy Now</a>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
-                <img src="https://source.unsplash.com/400x300/?monitor,setup" alt="Gaming Monitor" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h3 class="text-xl font-bold">Gaming Monitor</h3>
-                    <p class="text-gray-700 mt-2">Enjoy smooth gameplay with this high-refresh-rate gaming monitor.</p>
-                    <a href="#" class="block mt-4 bg-blue-500 text-white py-2 px-4 text-center rounded-lg hover:bg-blue-700">Buy Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
-        // Toggle mobile menu (future improvement)
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            alert("Mobile menu functionality coming soon!");
-        });
+        // Add Tailwind animations
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'fade-up': 'fadeUp 1s ease-out forwards'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: 0 },
+                            '100%': { opacity: 1 }
+                        },
+                        fadeUp: {
+                            '0%': { opacity: 0, transform: 'translateY(20px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        };
     </script>
-
 </body>
 </html>
+
+  
