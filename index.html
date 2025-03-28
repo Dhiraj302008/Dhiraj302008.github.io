@@ -6,87 +6,68 @@
     <title>Mydas - Best Tech Deals</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 mt-20">
+<body class="bg-gray-100">
 
-    <!-- Top Banner -->
-    <div class="bg-blue-600 text-white text-center py-2 text-sm">
-        Have a perfect knowledge on the product you're going to buy
-        <a href="#" class="bg-black text-white px-3 py-1 rounded-full text-xs font-semibold ml-2">Shop Now</a>
-    </div>
-
-    <!-- Navbar -->
-    <nav class="bg-gray-900 text-white shadow-md fixed top-8 left-0 w-full z-10">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-            <!-- Logo & Categories -->
-            <div class="flex items-center space-x-6">
-                <a href="#" class="text-2xl font-bold text-yellow-400">Mydas</a>
-                <button class="flex items-center space-x-1 text-white">
-                    <span class="text-lg">☰</span>
-                    <span class="font-semibold">All Categories</span>
-                </button>
-            </div>
-
-            <!-- Search Bar -->
-            <div class="flex-grow mx-4 relative">
-                <input type="text" placeholder="Search everything about gaming & tech..."
-                    class="w-full px-4 py-2 rounded-full bg-gray-800 text-white placeholder-gray-400">
-                <button class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-yellow-500 px-3 py-2 rounded-full">
-                    🔍
-                </button>
-            </div>
-
-            <!-- Icons -->
-            <div class="flex space-x-6 items-center">
-                <a href="#" class="flex flex-col items-center text-white hover:text-yellow-400">
-                    ❤️ <span class="text-xs">Wishlist</span>
-                </a>
-                <a href="#" class="flex flex-col items-center text-white hover:text-yellow-400">
-                    🔄 <span class="text-xs">Reorder</span>
-                </a>
-                <a href="#" class="flex flex-col items-center text-white hover:text-yellow-400">
-                    👤 <span class="text-xs">Sign In</span>
-                </a>
-                <a href="#" class="relative flex items-center text-white hover:text-yellow-400">
-                    🛒 <span class="absolute -top-1 -right-2 bg-red-600 text-xs px-1 rounded-full">0</span>
-                </a>
-            </div>
+    <!-- Fixed Header (Promo Banner + Navbar) -->
+    <header class="fixed top-0 left-0 w-full z-50">
+        <!-- Promo Banner -->
+        <div class="bg-blue-600 text-white text-center py-2 text-sm">
+            Have a perfect knowledge on the product you're going to buy
+            <a href="#" class="bg-black text-white px-3 py-1 rounded-full text-xs font-semibold ml-2">Shop Now</a>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="h-[80vh] flex items-center justify-center bg-gray-700 text-white text-center px-6">
-        <div>
-            <h1 class="text-5xl font-extrabold">Elevate Your Tech Experience</h1>
-            <p class="mt-4 text-lg">Find the top-rated gaming and tech gadgets, hand-picked for you.</p>
-            <a href="#" class="mt-6 inline-block px-6 py-3 bg-blue-500 text-white rounded-full text-lg font-semibold shadow-md hover:bg-blue-600 transition">Shop Now</a>
-        </div>
-    </section>
+        <!-- Navbar -->
+        <nav class="bg-gray-900 text-white shadow-md">
+            <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+                <!-- Logo & Categories -->
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-2xl font-bold text-yellow-400">Mydas</a>
+                    <button class="flex items-center space-x-1 text-white">
+                        <span class="text-lg">☰</span>
+                        <span class="font-semibold">All Categories</span>
+                    </button>
+                </div>
 
-    <!-- Products -->
-    <section class="max-w-7xl mx-auto py-12 px-6">
-        <h2 class="text-3xl font-bold text-gray-800 text-center">Trending Tech Products</h2>
-        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition cursor-pointer">
-                <img src="https://via.placeholder.com/300" alt="Product 1" class="w-full h-48 object-cover rounded-md">
-                <h3 class="text-xl font-semibold mt-4">Gaming Headset</h3>
-                <p class="text-gray-600 mt-2">Immersive surround sound for the best gaming experience.</p>
-                <a href="#" class="block mt-4 text-blue-600 font-semibold">View Deal →</a>
+                <!-- Search Bar -->
+                <div class="flex-grow mx-4 relative">
+                    <input type="text" placeholder="Search everything about gaming & tech..."
+                        class="w-full px-4 py-2 rounded-full bg-gray-800 text-white placeholder-gray-400">
+                    <button class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-yellow-500 px-3 py-2 rounded-full">
+                        🔍
+                    </button>
+                </div>
+
+                <!-- Icons -->
+                <div class="flex space-x-6 items-center">
+                    <a href="#" class="flex flex-col items-center text-white hover:text-yellow-400">
+                        ❤️ <span class="text-xs">Wishlist</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center text-white hover:text-yellow-400">
+                        🔄 <span class="text-xs">Reorder</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center text-white hover:text-yellow-400">
+                        👤 <span class="text-xs">Sign In</span>
+                    </a>
+                    <a href="#" class="relative flex items-center text-white hover:text-yellow-400">
+                        🛒 <span class="absolute -top-1 -right-2 bg-red-600 text-xs px-1 rounded-full">0</span>
+                    </a>
+                </div>
             </div>
-            <!-- Repeat for other products -->
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white text-center py-6 mt-12">
-        <p>© 2025 <span class="text-yellow-400">Mydas</span>. All rights reserved.</p>
-    </footer>
+    <!-- Add margin-top to body to avoid navbar overlap -->
+    <main class="mt-32">  <!-- Adjust this value based on your navbar height -->
+        <!-- Hero Section -->
+        <section class="h-[80vh] flex items-center justify-center bg-gray-700 text-white text-center px-6">
+            <div>
+                <h1 class="text-5xl font-extrabold">Elevate Your Tech Experience</h1>
+                <p class="mt-4 text-lg">Find the top-rated gaming and tech gadgets, hand-picked for you.</p>
+                <a href="#" class="mt-6 inline-block px-6 py-3 bg-blue-500 text-white rounded-full text-lg font-semibold shadow-md hover:bg-blue-600 transition">Shop Now</a>
+            </div>
+        </section>
 
-    <!-- Back to Top -->
-    <a href="#" class="fixed bottom-6 right-6 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600">
-        ↑
-    </a>
-
+        <!-- Rest of your content -->
+    </main>
 </body>
 </html>
-
-  
