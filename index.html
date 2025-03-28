@@ -10,23 +10,54 @@
 
     <!-- Navbar -->
     <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-10">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-blue-600">Mydas</a>
+       <!-- Top Promotional Banner -->
+<div class="bg-blue-600 text-white text-center py-2 text-sm">
+    FREE delivery & 40% Discount for next 3 orders! Place your 1st order now.
+    <a href="#" class="bg-black text-white px-3 py-1 rounded-full text-xs font-semibold ml-2">Shop Now</a>
+</div>
 
-            <div class="hidden md:flex space-x-6">
-                <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600">Categories</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600">Deals</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
-            </div>
-
+<!-- Navbar -->
+<nav class="bg-gray-900 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+        
+        <!-- Left Side: Logo & Categories -->
+        <div class="flex items-center space-x-6">
+            <a href="#" class="text-2xl font-bold text-yellow-400">Mydas</a>
             <div class="relative">
-                <input type="text" placeholder="Search products..." class="px-4 py-2 border rounded-full w-48 md:w-64">
-                <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500">🔍</button>
+                <button class="flex items-center space-x-1 text-white">
+                    <span class="text-lg">☰</span>
+                    <span class="font-semibold">All Categories</span>
+                </button>
             </div>
-
-            <button class="md:hidden text-gray-700 text-2xl">☰</button>
         </div>
+
+        <!-- Search Bar -->
+        <div class="flex-grow mx-4 relative">
+            <input type="text" placeholder="Search everything about gaming & tech..."
+                class="w-full px-4 py-2 rounded-full bg-gray-800 text-white placeholder-gray-400">
+            <button class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-yellow-500 px-3 py-2 rounded-full">
+                🔍
+            </button>
+        </div>
+
+        <!-- Right Side: Icons -->
+        <div class="flex space-x-6 items-center">
+            <a href="#" class="flex flex-col items-center text-white hover:text-yellow-400">
+                ❤️ <span class="text-xs">Wishlist</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-white hover:text-yellow-400">
+                🔄 <span class="text-xs">Reorder</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-white hover:text-yellow-400">
+                👤 <span class="text-xs">Sign In</span>
+            </a>
+            <a href="#" class="relative flex items-center text-white hover:text-yellow-400">
+                🛒 <span class="absolute -top-1 -right-2 bg-red-600 text-xs px-1 rounded-full">0</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
     </nav>
 
     <!-- Hero Section -->
