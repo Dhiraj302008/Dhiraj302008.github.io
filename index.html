@@ -1,100 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head><script src="https://cdn.tailwindcss.com"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyAffiliate - Best Tech Deals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<header class="bg-[#111827] text-white py-3 px-6 flex justify-between items-center">
-    <div class="flex items-center space-x-2">
-        <span class="text-yellow-400 font-bold text-xl">MyAffiliate</span>
-    </div>
-    <nav class="space-x-6">
-        <a href="#" class="hover:text-yellow-400">Home</a>
-        <a href="#" class="hover:text-yellow-400">Categories</a>
-        <a href="#" class="hover:text-yellow-400">Deals</a>
-        <a href="#" class="hover:text-yellow-400">Contact</a>
-    </nav>
-    <div class="relative">
-        <input type="text" placeholder="Search products..." class="px-4 py-2 rounded-full w-72 text-black">
-        <button class="absolute right-3 top-1/2 transform -translate-y-1/2 flex items-center justify-center">
-            🔍
-        </button>
-    </div>
-</header>
-
-<body class="bg-white text-gray-900">
+<body class="bg-gray-100">
 
     <!-- Navbar -->
-    <nav class="bg-blue-600 shadow-md fixed top-0 left-0 w-full z-10">
+    <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="text-2xl font-bold text-yellow-400">MyAffiliate</a>
+            <a href="#" class="text-2xl font-bold text-blue-600">MyAffiliate</a>
 
-            <!-- Navigation Links -->
             <div class="hidden md:flex space-x-6">
-                <a href="#" class="text-white hover:text-yellow-400">Home</a>
-                <a href="#" class="text-white hover:text-yellow-400">Categories</a>
-                <a href="#" class="text-white hover:text-yellow-400">Deals</a>
-                <a href="#" class="text-white hover:text-yellow-400">Contact</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Categories</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Deals</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
             </div>
 
-            <!-- Search Bar -->
             <div class="relative">
                 <input type="text" placeholder="Search products..." class="px-4 py-2 border rounded-full w-48 md:w-64">
                 <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500">🔍</button>
             </div>
 
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-white text-2xl">☰</button>
+            <button class="md:hidden text-gray-700 text-2xl">☰</button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-<div class="relative w-full h-[500px] bg-cover bg-center" 
-    style="background-image: url('https://source.unsplash.com/1600x900/?gaming,setup,technology');">
-    <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-600 to-yellow-500 opacity-80"></div>
-    <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-6">
-        <h2 class="text-6xl font-extrabold tracking-wide text-white drop-shadow-lg"> Elevate your Tech experience </h2>
-        <p class="text-2xl mt-4 max-w-2xl text-yellow-300"> Finf the Top-rated gaming and tech gadjets, Hand picked for you</p>
-        <a href="#" class="mt-6 bg-yellow-500 text-blue-900 py-3 px-8 rounded-full text-xl font-bold shadow-lg hover:bg-yellow-600 transition-all duration-300">
-            Explore Deals
-        </a>
-    </div>
-</div>
-
+    <section class="h-screen flex items-center justify-center bg-gray-700 text-white text-center px-6">
+        <div>
+            <h1 class="text-5xl font-extrabold animate-fade-in">Elevate Your Tech Experience</h1>
+            <p class="mt-4 text-lg">Find the top-rated gaming and tech gadgets, hand-picked for you.</p>
+            <a href="#" class="mt-6 inline-block px-6 py-3 bg-blue-500 text-white rounded-full text-lg font-semibold shadow-md hover:bg-blue-600 transition">Shop Now</a>
+        </div>
+    </section>
 
     <!-- Product Section -->
     <section class="max-w-7xl mx-auto py-12 px-6">
-        <h2 class="text-3xl font-bold text-center text-blue-600">Top Picks for You</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
-            <!-- Product 1 -->
-            <div class="bg-white shadow-lg rounded-lg p-4 animate-fade-in">
-                <img src="https://via.placeholder.com/300" alt="Product 1" class="w-full h-40 object-cover rounded">
-                <h3 class="text-xl font-semibold mt-4 text-blue-600">Gaming Headset</h3>
-                <p class="text-gray-600 mt-2">$79.99</p>
-                <a href="#" class="block bg-blue-600 text-white text-center mt-4 py-2 rounded hover:bg-blue-700 transition">Buy Now</a>
+        <h2 class="text-3xl font-bold text-gray-800 text-center">Trending Tech Products</h2>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <img src="https://via.placeholder.com/300" alt="Product 1" class="w-full rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Gaming Headset</h3>
+                <p class="text-gray-600 mt-2">Immersive surround sound for the best gaming experience.</p>
+                <a href="#" class="block mt-4 text-blue-600 font-semibold">View Deal →</a>
             </div>
 
-            <!-- Product 2 -->
-            <div class="bg-white shadow-lg rounded-lg p-4 animate-fade-in">
-                <img src="https://via.placeholder.com/300" alt="Product 2" class="w-full h-40 object-cover rounded">
-                <h3 class="text-xl font-semibold mt-4 text-blue-600">Mechanical Keyboard</h3>
-                <p class="text-gray-600 mt-2">$99.99</p>
-                <a href="#" class="block bg-blue-600 text-white text-center mt-4 py-2 rounded hover:bg-blue-700 transition">Buy Now</a>
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <img src="https://via.placeholder.com/300" alt="Product 2" class="w-full rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Mechanical Keyboard</h3>
+                <p class="text-gray-600 mt-2">High-performance mechanical switches for faster response.</p>
+                <a href="#" class="block mt-4 text-blue-600 font-semibold">View Deal →</a>
             </div>
 
-            <!-- Product 3 -->
-            <div class="bg-white shadow-lg rounded-lg p-4 animate-fade-in">
-                <img src="https://via.placeholder.com/300" alt="Product 3" class="w-full h-40 object-cover rounded">
-                <h3 class="text-xl font-semibold mt-4 text-blue-600">Wireless Mouse</h3>
-                <p class="text-gray-600 mt-2">$49.99</p>
-                <a href="#" class="block bg-blue-600 text-white text-center mt-4 py-2 rounded hover:bg-blue-700 transition">Buy Now</a>
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <img src="https://via.placeholder.com/300" alt="Product 3" class="w-full rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Gaming Mouse</h3>
+                <p class="text-gray-600 mt-2">Precision tracking and customizable buttons for gamers.</p>
+                <a href="#" class="block mt-4 text-blue-600 font-semibold">View Deal →</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-600 text-white text-center py-6">
-        <p>&copy; 2025 MyAffiliate. All rights reserved.</p>
+    <footer class="bg-gray-900 text-white text-center py-6 mt-12">
+        <p>© 2025 MyAffiliate. All rights reserved.</p>
     </footer>
 
 </body>
 </html>
+
+  
