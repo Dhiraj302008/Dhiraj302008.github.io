@@ -6,60 +6,76 @@
     <title>MyAffiliate - Best Tech Deals</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-gray-100">
 
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-blue-600 hover:text-blue-800 transition-all">MyAffiliate</a>
+            <a href="#" class="text-2xl font-bold text-blue-600">MyAffiliate</a>
             <div class="hidden md:flex space-x-6">
-                <a href="#" class="text-gray-700 hover:text-blue-600 transition-all">Home</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600 transition-all">Categories</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600 transition-all">Deals</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600 transition-all">Contact</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Categories</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Deals</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
             </div>
             <div class="relative">
-                <input type="text" placeholder="Search products..." class="px-4 py-2 border rounded-full w-48 md:w-64 focus:ring-2 focus:ring-blue-500 transition-all">
-                <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-blue-600 transition-all">🔍</button>
+                <input type="text" placeholder="Search products..." class="px-4 py-2 border rounded-full w-48 md:w-64">
+                <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500">🔍</button>
             </div>
             <button class="md:hidden text-gray-700 text-2xl">☰</button>
         </div>
     </nav>
 
-    <!-- Hero Section with Fade-in Effect -->
-    <div class="relative w-full h-[500px] bg-cover bg-center opacity-0 animate-fade-in"
-        style="background-image: url('https://source.unsplash.com/1600x900/?gaming,setup,technology');">
-        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-6">
-            <h1 class="text-6xl font-extrabold tracking-wide animate-fade-up">Elevate Your Tech Experience</h1>
-            <p class="text-2xl mt-4 max-w-2xl animate-fade-up delay-200">Find the top-rated gaming and tech gadgets, hand-picked for you.</p>
-            <a href="#" class="mt-6 bg-blue-500 text-white py-3 px-8 rounded-full text-xl font-bold shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-110">
-                Shop Now
-            </a>
-        </div>
-    </div>
+    <!-- Hero Section -->
+    <header class="bg-gray-700 text-white text-center py-24 mt-16">
+        <h1 class="text-5xl font-bold animate-fade-in">Elevate Your Tech Experience</h1>
+        <p class="text-lg mt-3 animate-fade-in-delay">Find the top-rated gaming and tech gadgets, hand-picked for you.</p>
+        <a href="#" class="mt-5 inline-block bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-bold shadow-md hover:bg-blue-700 transition">Shop Now</a>
+    </header>
 
-    <script>
-        // Add Tailwind animations
-        tailwind.config = {
-            theme: {
-                extend: {
-                    animation: {
-                        'fade-in': 'fadeIn 1s ease-out forwards',
-                        'fade-up': 'fadeUp 1s ease-out forwards'
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: 0 },
-                            '100%': { opacity: 1 }
-                        },
-                        fadeUp: {
-                            '0%': { opacity: 0, transform: 'translateY(20px)' },
-                            '100%': { opacity: 1, transform: 'translateY(0)' }
-                        }
-                    }
-                }
-            }
-        };
-    </script>
+    <!-- Product Listings -->
+    <section class="max-w-7xl mx-auto py-12">
+        <h2 class="text-3xl font-bold text-center mb-6">Top Tech Deals</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow hover:scale-105 transition">
+                <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-semibold mt-4">Gaming Headset</h3>
+                <p class="text-gray-600">Immersive sound experience with noise cancellation.</p>
+                <a href="#" class="block mt-3 text-blue-600 font-semibold">View Deal →</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:scale-105 transition">
+                <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-semibold mt-4">Mechanical Keyboard</h3>
+                <p class="text-gray-600">RGB lighting and ultra-fast response keys.</p>
+                <a href="#" class="block mt-3 text-blue-600 font-semibold">View Deal →</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:scale-105 transition">
+                <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-semibold mt-4">4K Gaming Monitor</h3>
+                <p class="text-gray-600">Experience stunning visuals with high refresh rates.</p>
+                <a href="#" class="block mt-3 text-blue-600 font-semibold">View Deal →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-12">
+        <p>&copy; 2025 MyAffiliate. All rights reserved.</p>
+    </footer>
+
+    <!-- Animations -->
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        .animate-fade-in-delay {
+            animation: fadeIn 1.5s ease-out;
+        }
+    </style>
+
 </body>
 </html>
