@@ -7,21 +7,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom Animations */
-        .animate-gradient {
-            background-size: 300% 300%;
-            animation: gradient 8s ease infinite;
-        }
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .fade-in {
-            animation: fadeIn 1s ease-in;
-        }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: fadeIn 1s ease-in; }
+        
+        /* Product Image Hover Effect */
+        .product-image { transition: transform 0.3s ease; }
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        
+        /* Hero Background Overlay */
+        .hero-overlay {
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.7) 0%,
+                rgba(0,0,0,0.3) 50%,
+                rgba(0,0,0,0.7) 100%
+            );
         }
     </style>
 </head>
@@ -75,11 +80,20 @@
     </header>
 
     <!-- Main Content -->
-    <main class="mt-28 fade-in"> <!-- Adjusted for fixed header height -->
+    <main class="mt-28 fade-in">
 
-        <!-- Hero Section -->
-        <section class="min-h-[80vh] flex items-center justify-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-purple-900 to-gray-900 animate-gradient"></div>
+        <!-- Hero Section with Background Image -->
+        <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+            <!-- Background Image -->
+            <img src="hero-bg.jpg" 
+                 alt="Tech gadgets background" 
+                 class="absolute inset-0 w-full h-full object-cover"
+                 loading="eager">
+            
+            <!-- Overlay -->
+            <div class="absolute inset-0 hero-overlay"></div>
+            
+            <!-- Content -->
             <div class="relative z-10 text-center px-6 text-white">
                 <h1 class="text-4xl md:text-6xl font-bold mb-4">Elevate Your Tech Experience</h1>
                 <p class="text-xl mb-8">Find the top-rated gaming and tech gadgets, hand-picked for you.</p>
@@ -91,14 +105,22 @@
 
         <!-- Products Section -->
         <section id="products" class="py-16 bg-gray-50 relative">
-            <div class="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgwLDAsMCwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==')]"></div>
+            <!-- Circuit Pattern Background -->
+            <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgwLDAsMCwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==')]"></div>
+            
             <div class="max-w-7xl mx-auto px-6 relative z-10">
                 <h2 class="text-3xl font-bold text-center mb-12">Trending Tech Products</h2>
+                
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Product 1 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all">
-                        <div class="h-48 bg-gray-100 flex items-center justify-center">
-                            <span class="text-gray-400">Gaming Headset</span>
+                    <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all">
+                        <div class="h-48 bg-gray-100 overflow-hidden">
+                            <img src="products/gaming-headset.webp" 
+                                 alt="HyperX Cloud II Gaming Headset" 
+                                 class="w-full h-full product-image object-contain p-4"
+                                 loading="lazy"
+                                 width="800"
+                                 height="800">
                         </div>
                         <div class="p-6">
                             <h3 class="font-bold text-xl mb-2">HyperX Cloud II</h3>
@@ -111,10 +133,16 @@
                             </div>
                         </div>
                     </div>
+                    
                     <!-- Product 2 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all">
-                        <div class="h-48 bg-gray-100 flex items-center justify-center">
-                            <span class="text-gray-400">Mechanical Keyboard</span>
+                    <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all">
+                        <div class="h-48 bg-gray-100 overflow-hidden">
+                            <img src="products/mechanical-keyboard.webp" 
+                                 alt="Razer BlackWidow Keyboard" 
+                                 class="w-full h-full product-image object-contain p-4"
+                                 loading="lazy"
+                                 width="800"
+                                 height="800">
                         </div>
                         <div class="p-6">
                             <h3 class="font-bold text-xl mb-2">Razer BlackWidow</h3>
@@ -127,10 +155,16 @@
                             </div>
                         </div>
                     </div>
+                    
                     <!-- Product 3 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all">
-                        <div class="h-48 bg-gray-100 flex items-center justify-center">
-                            <span class="text-gray-400">Gaming Mouse</span>
+                    <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all">
+                        <div class="h-48 bg-gray-100 overflow-hidden">
+                            <img src="products/gaming-mouse.webp" 
+                                 alt="Logitech G502 Mouse" 
+                                 class="w-full h-full product-image object-contain p-4"
+                                 loading="lazy"
+                                 width="800"
+                                 height="800">
                         </div>
                         <div class="p-6">
                             <h3 class="font-bold text-xl mb-2">Logitech G502</h3>
