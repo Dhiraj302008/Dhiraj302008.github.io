@@ -12,12 +12,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .fade-in { animation: fadeIn 1s ease-in; }
-        
-        /* Product Image Hover Effect */
-        .product-image { transition: transform 0.3s ease; }
-        .product-card:hover .product-image {
-            transform: scale(1.05);
-        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -32,116 +26,73 @@
 
         <!-- Navbar -->
         <nav class="bg-gray-900 text-white shadow-md">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-col md:flex-row justify-between items-center">
-                <!-- Logo & Categories -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+                <!-- Logo & Menu Button -->
                 <div class="flex items-center justify-between w-full md:w-auto">
                     <a href="#" class="text-2xl font-bold text-yellow-400">Mydas</a>
                     <button id="menu-toggle" class="md:hidden text-white text-2xl">☰</button>
                 </div>
 
-                <!-- Mobile Menu -->
-                <div id="mobile-menu" class="hidden flex-col w-full mt-4 space-y-2 md:hidden">
-                    <a href="#" class="text-white hover:text-yellow-400">Wishlist</a>
-                    <a href="#" class="text-white hover:text-yellow-400">Reorder</a>
-                    <a href="#" class="text-white hover:text-yellow-400">Sign In</a>
-                    <a href="#" class="text-white hover:text-yellow-400">Cart</a>
-                </div>
-
                 <!-- Search Bar -->
-                <div class="hidden md:block flex-grow mx-4 relative">
-                    <div class="relative">
-                        <input type="text" placeholder="Search everything about gaming & tech..."
-                            class="w-full px-4 py-2 rounded-full bg-gray-800 text-white placeholder-gray-400 focus:outline-none">
-                        <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-yellow-500 px-3 py-2 rounded-full">
-                            🔍
-                        </button>
-                    </div>
+                <div class="hidden md:flex flex-grow mx-4 relative">
+                    <input type="text" placeholder="Search everything about gaming & tech..."
+                        class="w-full px-4 py-2 rounded-full bg-gray-800 text-white placeholder-gray-400 focus:outline-none">
+                    <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-yellow-500 px-3 py-2 rounded-full">
+                        🔍
+                    </button>
                 </div>
 
                 <!-- Desktop Icons -->
                 <div class="hidden md:flex space-x-6 items-center">
-                    <a href="#" class="flex flex-col items-center text-white hover:text-yellow-400">
-                        ❤️ <span class="text-xs">Wishlist</span>
-                    </a>
-                    <a href="#" class="flex flex-col items-center text-white hover:text-yellow-400">
-                        🔄 <span class="text-xs">Reorder</span>
-                    </a>
-                    <a href="#" class="flex flex-col items-center text-white hover:text-yellow-400">
-                        👤 <span class="text-xs">Sign In</span>
-                    </a>
-                    <a href="#" class="relative flex items-center text-white hover:text-yellow-400">
-                        🛒 <span class="absolute -top-1 -right-2 bg-red-600 text-xs px-1 rounded-full">0</span>
-                    </a>
+                    <a href="#" class="text-white hover:text-yellow-400">❤️ Wishlist</a>
+                    <a href="#" class="text-white hover:text-yellow-400">🔄 Reorder</a>
+                    <a href="#" class="text-white hover:text-yellow-400">👤 Sign In</a>
+                    <a href="#" class="text-white hover:text-yellow-400">🛒 Cart</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <!-- Main Content -->
-    <main class="mt-28 fade-in">
+    <main class="mt-20 fade-in">
         <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center" 
                  style="background-image: url('images/hero-bg.jpg');">
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
             <div class="relative z-10 text-center px-6 text-white">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Elevate Your Tech Experience</h1>
-                <p class="text-xl mb-8">Find the top-rated gaming and tech gadgets, hand-picked for you.</p>
-                <a href="#products" class="inline-block px-8 py-3 bg-yellow-600 hover:bg-yellow-500 rounded-full font-bold transition-all">
+                <h1 class="text-3xl md:text-6xl font-bold mb-4">Elevate Your Tech Experience</h1>
+                <p class="text-lg md:text-xl mb-8">Find the top-rated gaming and tech gadgets, hand-picked for you.</p>
+                <a href="#products" class="inline-block px-6 py-3 bg-yellow-600 hover:bg-yellow-500 rounded-full font-bold transition-all">
                     Shop Now
                 </a>
             </div>
         </section>
+
+        <!-- Top Trend Products Section -->
+        <section id="products" class="py-12 bg-gray-100 px-4 md:px-12">
+            <h2 class="text-2xl md:text-4xl font-bold text-center mb-8">Top Trend Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-4 shadow-md rounded-lg product-card">
+                    <img src="images/product1.jpg" alt="Product 1" class="w-full h-48 object-cover product-image">
+                    <h3 class="text-lg font-semibold mt-4">Gaming Headset</h3>
+                    <p class="text-gray-600">High-quality sound experience.</p>
+                    <a href="#" class="block mt-2 text-blue-600 font-semibold">Buy Now</a>
+                </div>
+                <div class="bg-white p-4 shadow-md rounded-lg product-card">
+                    <img src="images/product2.jpg" alt="Product 2" class="w-full h-48 object-cover product-image">
+                    <h3 class="text-lg font-semibold mt-4">Mechanical Keyboard</h3>
+                    <p class="text-gray-600">RGB backlit with smooth keys.</p>
+                    <a href="#" class="block mt-2 text-blue-600 font-semibold">Buy Now</a>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h4 class="text-xl font-bold text-yellow-400 mb-4">Mydas</h4>
-                    <p>Your trusted source for premium tech gadgets and gaming gear.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Shop</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-yellow-400">Gaming</a></li>
-                        <li><a href="#" class="hover:text-yellow-400">Laptops</a></li>
-                        <li><a href="#" class="hover:text-yellow-400">Accessories</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Support</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-yellow-400">Contact Us</a></li>
-                        <li><a href="#" class="hover:text-yellow-400">FAQs</a></li>
-                        <li><a href="#" class="hover:text-yellow-400">Returns</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Connect</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="hover:text-yellow-400">Twitter</a>
-                        <a href="#" class="hover:text-yellow-400">Instagram</a>
-                        <a href="#" class="hover:text-yellow-400">Discord</a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p>© 2025 Mydas. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <a href="#" class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition">
-        ↑
-    </a>
 
     <!-- JavaScript for Mobile Menu Toggle -->
     <script>
         document.getElementById("menu-toggle").addEventListener("click", function() {
             var menu = document.getElementById("mobile-menu");
             menu.classList.toggle("hidden");
-            menu.classList.toggle("flex"); // Ensure it properly displays on mobile
+            menu.classList.toggle("flex");
         });
     </script>
 
