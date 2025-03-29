@@ -11,17 +11,29 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .fade-in { animation: fadeIn 1s ease-in; }
+
+        @keyframes scaleUp {
+            from { transform: scale(0.9); }
+            to { transform: scale(1); }
+        }
+        .scale-up { animation: scaleUp 0.5s ease-in-out; }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .slide-in { animation: slideIn 0.8s ease-out; }
     </style>
 </head>
 <body class="bg-gray-100">
 
-    <header class="fixed top-0 left-0 w-full z-50">
+    <header class="fixed top-0 left-0 w-full z-50 fade-in">
         <div class="bg-blue-600 text-white text-center py-2 text-sm">
             Have a perfect knowledge on the product you're going to buy
             <a href="#" class="bg-black text-white px-3 py-1 rounded-full text-xs font-semibold ml-2">Shop Now</a>
         </div>
 
-        <nav class="bg-gray-900 text-white shadow-md">
+        <nav class="bg-gray-900 text-white shadow-md slide-in">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
                 <div class="flex items-center justify-between w-full md:w-auto">
                     <a href="#" class="text-2xl font-bold text-yellow-400">Mydas</a>
@@ -55,7 +67,7 @@
     </header>
 
     <main class="mt-20 fade-in">
-        <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center" 
+        <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center scale-up" 
                  style="background-image: url('images/hero-bg.jpg');">
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
             <div class="relative z-10 text-center px-6 text-white">
@@ -70,19 +82,19 @@
         <section id="products" class="py-12 bg-gray-100 px-4 md:px-12">
             <h2 class="text-2xl md:text-4xl font-bold text-center mb-8">Top Trend Products</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <div class="bg-white p-4 shadow-md rounded-lg product-card">
+                <div class="bg-white p-4 shadow-md rounded-lg product-card fade-in">
                     <img src="images/product1.jpg" alt="Product 1" class="w-full h-48 object-cover product-image">
                     <h3 class="text-lg font-semibold mt-4">Gaming Headset</h3>
                     <p class="text-gray-600">High-quality sound experience.</p>
                     <a href="#" class="block mt-2 text-blue-600 font-semibold">Check Price on Amazon</a>
                 </div>
-                <div class="bg-white p-4 shadow-md rounded-lg product-card">
+                <div class="bg-white p-4 shadow-md rounded-lg product-card fade-in">
                     <img src="images/product2.jpg" alt="Product 2" class="w-full h-48 object-cover product-image">
                     <h3 class="text-lg font-semibold mt-4">Mechanical Keyboard</h3>
                     <p class="text-gray-600">RGB backlit with smooth keys.</p>
                     <a href="#" class="block mt-2 text-blue-600 font-semibold">Check Price on Amazon</a>
                 </div>
-                <div class="bg-white p-4 shadow-md rounded-lg product-card">
+                <div class="bg-white p-4 shadow-md rounded-lg product-card fade-in">
                     <img src="images/product3.jpg" alt="Product 3" class="w-full h-48 object-cover product-image">
                     <h3 class="text-lg font-semibold mt-4">Gaming Mouse</h3>
                     <p class="text-gray-600">Ultra-fast response rate.</p>
